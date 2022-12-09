@@ -1,7 +1,9 @@
-import { query } from '../db/index';
+import { query } from '../db/index.js';
 
 async function getDinosaurs() {
-  const data = await query('SELECT * FROM dinosaurs;');
+  console.log("made it to model")
+  const data = await query('SELECT * FROM dinosaurs');
+  console.log(data)
   return data.rows;
 }
 

@@ -1,10 +1,11 @@
-import {router} from 'express';
+import { Router } from 'express';
 
-import { getDinosaurs } from '../Models/dinoModel';
+import { getDinosaurs } from '../models/dinoModel.js';
 
 const dinoRouter = Router();
 
-router.get('/', async function (req, res) {
+dinoRouter.get('/', async function (req, res) {
+  console.log('made it to route')
   const data = await getDinosaurs();
   res.json({ success: true, payload: data });
 });
