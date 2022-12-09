@@ -11,5 +11,8 @@ app.use(express.json());
 
 app.use("/api/dino", dinoRouter);
 
-export default app;
+app.listen(PORT, function () {
+    console.log(`The server LIVES - on Port ${PORT}`);
+});
 
+export default app;
