@@ -1,9 +1,8 @@
-import { pool } from '../db/index';
+import { query } from '../db/index';
 
-export async function getDinosaurs() {
-  const data = await pool.query('SELECT * FROM dinosaurs');
-  console.log('Dinosaurs', data.rows);
+async function getDinosaurs() {
+  const data = await query('SELECT * FROM dinosaurs;');
   return data.rows;
 }
 
-// export { getDinosaurs };
+export { getDinosaurs };
