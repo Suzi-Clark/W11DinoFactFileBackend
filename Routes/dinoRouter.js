@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { getDinosaurs } from '../models/dinoModel.js';
+import getDinosaurs  from '../models/dinoModel.js';
 
 const dinoRouter = Router();
 
